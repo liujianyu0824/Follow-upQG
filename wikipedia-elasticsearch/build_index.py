@@ -44,6 +44,6 @@ def elastic_import(root_path, index_name):
 
 if __name__ == '__main__':
     index_name = 'extracted_wikidata'
-    walk('/home/liujianyu/wiki_dump/{}'.format(index_name))
-    elastic_import('/home/liujianyu/wiki_dump/{}'.format(index_name), index_name=index_name)
+    walk('/wiki_dump/{}'.format(index_name))
+    elastic_import('/wiki_dump/{}'.format(index_name), index_name=index_name)
 
