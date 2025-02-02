@@ -77,6 +77,6 @@ trainer.train()
 
 
 # 保存模型
-trainer.save_model("/home/liujianyu/llmgraph/baselines/model/t5-follow-up-generator")
-tokenizer.save_pretrained("/home/liujianyu/llmgraph/baselines/model/t5-follow-up-generator")
+trainer.save_model("/baselines/model/t5-follow-up-generator")
+tokenizer.save_pretrained("/baselines/model/t5-follow-up-generator")
 
