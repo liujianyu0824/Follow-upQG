@@ -1,0 +1,139 @@
+{
+    "properties": {
+        "id": {
+            "type": "keyword"
+        },
+        "url": {
+            "type": "text"
+        },
+        "title": {
+            "type": "text",
+            "fields": {
+                "keyword": {
+                    "type": "text",
+                    "index_options": "docs",
+                    "norms": false,
+                    "analyzer": "keyword",
+                    "similarity": "BM25"
+                },
+                "near_match": {
+                    "type": "text",
+                    "index_options": "docs",
+                    "norms": false,
+                    "analyzer": "near_match",
+                    "similarity": "BM25"
+                },
+                "near_match_asciifolding": {
+                    "type": "text",
+                    "index_options": "docs",
+                    "norms": false,
+                    "analyzer": "near_match_asciifolding",
+                    "similarity": "BM25"
+                },
+                "plain": {
+                    "type": "text",
+                    "analyzer": "plain",
+                    "search_analyzer": "plain_search",
+                    "similarity": "BM25",
+                    "position_increment_gap": 10
+                },
+                "prefix": {
+                    "type": "text",
+                    "index_options": "docs",
+                    "norms": false,
+                    "analyzer": "prefix",
+                    "search_analyzer": "near_match",
+                    "similarity": "BM25"
+                },
+                "prefix_asciifolding": {
+                    "type": "text",
+                    "index_options": "docs",
+                    "norms": false,
+                    "analyzer": "prefix_asciifolding",
+                    "search_analyzer": "near_match_asciifolding",
+                    "similarity": "BM25"
+                },
+                "trigram": {
+                    "type": "text",
+                    "index_options": "docs",
+                    "norms": false,
+                    "analyzer": "trigram",
+                    "similarity": "BM25"
+                }
+            },
+            "copy_to": [
+                "suggest",
+                "all",
+                "all",
+                "all",
+                "all",
+                "all",
+                "all",
+                "all",
+                "all",
+                "all",
+                "all",
+                "all",
+                "all",
+                "all",
+                "all",
+                "all",
+                "all",
+                "all",
+                "all",
+                "all",
+                "all",
+                "all_near_match",
+                "all_near_match",
+                "all_near_match",
+                "all_near_match",
+                "all_near_match",
+                "all_near_match",
+                "all_near_match",
+                "all_near_match",
+                "all_near_match",
+                "all_near_match",
+                "all_near_match",
+                "all_near_match",
+                "all_near_match",
+                "all_near_match",
+                "all_near_match",
+                "all_near_match",
+                "all_near_match",
+                "all_near_match",
+                "all_near_match",
+                "all_near_match"
+            ],
+            "analyzer": "text",
+            "search_analyzer": "text_search",
+            "similarity": "BM25",
+            "position_increment_gap": 10
+        },
+        "text": {
+            "type": "text",
+            "fields": {
+                "plain": {
+                    "type": "text",
+                    "index_options": "offsets",
+                    "analyzer": "plain",
+                    "search_analyzer": "plain_search",
+                    "similarity": "BM25",
+                    "position_increment_gap": 10
+                },
+                "word_count": {
+                    "type": "token_count",
+                    "store": true,
+                    "analyzer": "plain"
+                }
+            },
+            "copy_to": [
+                "all"
+            ],
+            "index_options": "offsets",
+            "analyzer": "text",
+            "search_analyzer": "text_search",
+            "similarity": "BM25",
+            "position_increment_gap": 10
+        }
+    }
+}
